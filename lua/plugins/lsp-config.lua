@@ -14,6 +14,14 @@ return {
           "hls",
           "kotlin_language_server",
           "pylsp",
+          "volar",
+        },
+        handlers = {
+            function(server_name) -- default handler
+                require("lspconfig")[server_name].setup({
+                    capabilities = capabilities
+                })
+            end,
         }
       })
     end

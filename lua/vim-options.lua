@@ -3,6 +3,8 @@ vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set number")
+vim.cmd("set autoindent")
+vim.cmd("set smartindent")
 vim.cmd("set relativenumber")
 vim.g.mapleader = " "
 vim.cmd("nnoremap <leader><TAB> :><CR>")
@@ -29,8 +31,8 @@ local opts = { noremap = true, silent = true }
 map('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
 map('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
 -- Re-order to previous/next
-map('n', '<A-<>', '<Cmd>BufferMovePrevious<CR>', opts)
-map('n', '<A->>', '<Cmd>BufferMoveNext<CR>', opts)
+map('n', '<<leader>-<>', '<Cmd>BufferMovePrevious<CR>', opts)
+map('n', '<<leader>->>', '<Cmd>BufferMoveNext<CR>', opts)
 -- Goto buffer in position...
 map('n', '<A-1>', '<Cmd>BufferGoto 1<CR>', opts)
 map('n', '<A-2>', '<Cmd>BufferGoto 2<CR>', opts)

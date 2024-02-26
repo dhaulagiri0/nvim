@@ -6,7 +6,6 @@
 :set softtabstop=2
 :set mouse=a
 :set autoindent
-:set nocindent
 :set smartindent
 :set expandtab
 let g:haskell_indent_disable = 1
