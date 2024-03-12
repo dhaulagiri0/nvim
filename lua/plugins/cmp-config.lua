@@ -47,8 +47,8 @@ return {
 
                     if cmp.visible() then
                         cmp.select_next_item()
-                    -- elseif require("copilot.suggestion").is_visible() then
-                    --     require("copilot.suggestion").accept()
+                    elseif require("copilot.suggestion").is_visible() then
+                        require("copilot.suggestion").accept()
                     elseif has_words_before() then
                         cmp.complete()
                         if #cmp.get_entries() == 1 then
